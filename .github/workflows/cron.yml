@@ -11,6 +11,10 @@ concurrency:
   group: cron
   cancel-in-progress: true
 
+permissions:
+  contents: write  # Required for pushing changes to the repository
+  pages: write    # Required for updating GitHub Pages
+
 jobs:
   cron:
     runs-on: ubuntu-latest
